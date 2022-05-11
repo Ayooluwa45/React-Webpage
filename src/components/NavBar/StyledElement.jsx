@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1;
 
 
   @media screen and (max-width: 960px){
@@ -41,6 +41,8 @@ export const NavLogo = styled(LinkR)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+
+
 `;
 
 export const MobileIcon = styled.div`
@@ -69,6 +71,7 @@ margin-right: -22px;
 @media screen and (max-width: 768px){
     display: none;
 }
+
 
 
 `
@@ -112,11 +115,15 @@ border-radius: 20px;
 background-color: green;
 border: none;
 
-&:hover{
+/* &:hover{
     transition:  all 0.2s ease-in-out;
     background-color: #fff;
     color: #010606
-}
-
+} */
+&:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #fff;
+    color: #010606;
+  }
 `
 

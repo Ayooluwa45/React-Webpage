@@ -1,9 +1,97 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import { FaTimes } from "react-icons/fa";
+import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS } from "react-scroll";
 
 export const SideBarContainer = styled.div`
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  align-content: center;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
+  
+  top: ${({ isOpen }) => (isOpen ? "0" : "-100")};
 
-`
+`;
+
+export const CloseIcon = styled(FaTimes)`
+  color: #fff;
+`;
 
 export const Icon = styled.div`
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+`;
 
-`
+export const SideBarWrapper = styled.div`
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+`;
+export const SideBarMenu = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 80px);
+ justify-content: center;
+
+  @media (max-width: 480px) {
+    grid-template-rows: repeat(5, 80px);
+    background-color: #fff;
+  } 
+`;
+export const SideBarLink = styled(LinkS)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+ 
+  &:hover {
+    color: #01bf71;
+    transition: 0.3s ease-in-out;
+  }  
+  
+`;
+
+export const SideBtnWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  
+`;
+export const SideBtnRoute = styled(LinkR)`
+  border-radius: 50px;
+  background-color: #01bf71;
+  white-space: nowrap;
+  padding: 16px 60px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #fff;
+    color: #010606;
+  }
+`;
