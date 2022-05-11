@@ -10,16 +10,15 @@ import {
   NavBtn,
   NavBtnLink
 } from "./StyledElement.jsx";
-//import FaBars from 'react-icons'
 import { FaBars } from "react-icons/fa";
 
-function NavBar() {
+function NavBar({toggle}) {
   return (
     <>
       <Nav>
         <NavBarContainer>
           <NavLogo to="/">ProdigyDev</NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
@@ -30,7 +29,7 @@ function NavBar() {
               <NavLinks to="discover">Discover</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services">Services</NavLinks>
+              <NavLinks to="services" >Services</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="signup">SignUp</NavLinks>
