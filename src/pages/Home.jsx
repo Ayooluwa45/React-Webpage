@@ -6,6 +6,8 @@ import Hero from '../components/hero/Hero.jsx'
 import Info from '../components/info/Info.jsx'
 import {homeObjOne, homeObjtwo, homeObjthree} from '../components/info/Data'
 import Services from '../components/services/Services.jsx'
+import Footer from '../components/footer/Footer'
+
 
 function Home() {
     const [isOpen, setIsOpen]= useState(false)
@@ -23,6 +25,7 @@ function Home() {
       <Info {...homeObjtwo}/>
       <Services />
       <Info {...homeObjthree}/>
+      <Footer />
     </>
   );
 }
